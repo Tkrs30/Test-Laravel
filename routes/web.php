@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', 'InfoController@index');
+Route::post('/login/iflogingood', 'InfoController@iflogingood');
+Route::get('/login/persopage', 'InfoController@persopage');
+Route::get('/login/logout', 'InfoController@logout');
